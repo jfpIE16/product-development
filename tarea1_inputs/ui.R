@@ -70,11 +70,13 @@ shinyUI(fluidPage(
                                            "Ingrese texto"),
                                  textAreaInput("textarea",
                                                "Ingrese parrafo"),
+                                 passwordInput("password",
+                                               "Ingrese password"),
                                  actionButton("action_button",
                                               "Ok"),
                                  actionLink("action_link",
                                             "Siguiente"),
-                                 submitButton("Reprocesar")
+                                 #submitButton("Reprocesar")
                              ),
                              mainPanel(
                                h3("Slider Input Sencillo"),
@@ -101,6 +103,8 @@ shinyUI(fluidPage(
                                verbatimTextOutput("text_output"),
                                h3("Parrafo"),
                                verbatimTextOutput("textarea_output"),
+                               h3("Password"),
+                               verbatimTextOutput("password_output"),
                                h3("Action Button"),
                                verbatimTextOutput("actionbtn_output"),
                                h3("Action Link"),

@@ -58,6 +58,10 @@ shinyServer(function(input, output) {
         input$textarea
     })
     
+    output$password_output <- renderText({
+        input$password
+    })
+    
     output$actionbtn_output <- renderText({
         input$action_button
     })
