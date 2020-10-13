@@ -2,8 +2,13 @@
 ## Carga de Archivos
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 **José Fernando Pérez Pérez**  
 **20000756**  
+=======
+**José Fernando Pérez Pérez**
+**20000756**
+>>>>>>> 15f64b9335269620b881597ae4923eca49e94d5d
 =======
 **José Fernando Pérez Pérez**
 **20000756**
