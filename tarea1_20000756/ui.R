@@ -54,6 +54,55 @@ shinyUI(fluidPage(
                          width = 12,
                          dataTableOutput("tabla3")
                      )
+                 )),
+        tabPanel("Clicks en tabla",
+                 fluidRow(
+                     column(
+                         width = 12,
+                         h2("Click en una fila"),
+                         dataTableOutput("tabla4"),
+                         verbatimTextOutput("tabla4_single_click")
+                     )
+                 ),
+                 fluidRow(
+                     column(
+                         width = 12,
+                         h2("Click en multiples filas"),
+                         dataTableOutput("tabla5"),
+                         verbatimTextOutput("tabla5_multi_click")
+                     )
+                 ),
+                 fluidRow(
+                     column(
+                         width = 12,
+                         h2("Click en una columna"),
+                         dataTableOutput("tabla6"),
+                         verbatimTextOutput("tabla6_single_click")
+                     )
+                 ),
+                 fluidRow(
+                     column(
+                         width = 12,
+                         h2("Click en multiples columnas"),
+                         dataTableOutput("tabla7"),
+                         verbatimTextOutput("tabla7_multi_click")
+                     )
+                 ),
+                 fluidRow(
+                     column(
+                         width = 12,
+                         h2("Click en una celda"),
+                         dataTableOutput("tabla8"),
+                         verbatimTextOutput("tabla8_single_click")
+                     )
+                 ),
+                 fluidRow(
+                     column(
+                         width = 12,
+                         h2("Click en multiples celdas"),
+                         dataTableOutput("tabla9"),
+                         verbatimTextOutput("tabla9_multi_click")
+                     )
                  ))
     )
 ))

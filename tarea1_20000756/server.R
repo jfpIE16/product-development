@@ -72,5 +72,71 @@ shinyServer(function(input, output) {
                                buttons=c("csv"))
                       )
     })
+    
+    output$tabla4 <- renderDataTable({
+        mtcars %>%
+            datatable(selection = "single")
+    })
+    
+    output$tabla4_single_click <- renderText({
+        input$tabla4_rows_selected
+    })
+    
+    output$tabla5 <- renderDataTable({
+        mtcars %>%
+            datatable()
+    })
+    
+    output$tabla5_multi_click <- renderText({
+        input$tabla5_rows_selected
+    })
+    
+    output$tabla6 <- renderDataTable({
+        mtcars %>%
+            datatable(selection = list(
+                mode = 'single',
+                target = 'column'
+            ))
+    })
+    
+    output$tabla6_single_click <- renderText({
+        input$tabla6_columns_selected
+    })
 
+    output$tabla7 <- renderDataTable({
+        mtcars %>%
+            datatable(selection = list(
+                mode = 'multiple',
+                target = 'column'
+            ))
+    })
+    
+    output$tabla7_multi_click <- renderText({
+        input$tabla7_columns_selected
+    })
+    
+    output$tabla8 <- renderDataTable({
+        mtcars %>%
+            datatable(selection = list(
+                mode = 'single',
+                target = 'cell'
+            ))
+    })
+    
+    output$tabla8_single_click <- renderPrint({
+        input$tabla8_cells_selected
+    })
+    
+    output$tabla9 <- renderDataTable({
+        mtcars %>%
+            datatable(selection = list(
+                mode = 'multiple',
+                target = 'cell'
+            ))
+    })
+    
+    output$tabla9_multi_click <- renderPrint({
+        input$tabla9_cells_selected
+    })
+    
     })
