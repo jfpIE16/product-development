@@ -6,5 +6,5 @@
 Se realiza un *Shiny App* con 3 *tabs* distintas, en las cuales se muestra el funcionamiento de las siguientes opciones:
 * Cargar un archivo y renderizar una vista de tabla normal.
 * Cargar un archivo y renderizar una vidata de *DataTable*.
-* Funcionamiento de extensiones, opciones y manipulacion de filas en un *DataTable*.
+* Funcionamiento de extensiones, opciones y manipulacion de filas, columnas y celdas individuales y multiples en un *DataTable*.
 
