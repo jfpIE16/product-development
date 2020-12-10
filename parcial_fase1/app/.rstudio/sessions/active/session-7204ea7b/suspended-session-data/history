@@ -1,0 +1,3 @@
+shiny::runApp('parcial_fase1')
+runApp('parcial_fase1')
+runApp('parcial_fase1')

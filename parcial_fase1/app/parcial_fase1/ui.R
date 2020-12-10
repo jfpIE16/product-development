@@ -1,33 +1,48 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
-# Define UI for application that draws a histogram
-shinyUI(fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotOutput("distPlot")
+shinyUI(
+    fluidPage(
+        
+        titlePanel("Parcial Fase 1 -- 20000756"),
+        tabsetPanel(
+            tabPanel("Raw Data",
+                     numericInput("maxrows", "Filas a mostrar", 5),
+                     fluidRow(
+                         column(
+                             width=12,
+                             h2("Descripción Videos"),
+                             verbatimTextOutput("rawtable1")
+                         )
+                     ),
+                     fluidRow(
+                         column(
+                             width = 12,
+                             h2("Estadísticas"),
+                             verbatimTextOutput("rawtable2")
+                         )
+                     )),
+            tabPanel("Manipulación de Datos",
+                     sidebarLayout(
+                         sidebarPanel(
+                             h3("Filtrado de datos"),
+                             selectInput("select",
+                                         "Seleccione filtro a aplicar",
+                                         choices = c("viewCount", "likeCount",
+                                                     "dislikeCount", "favoriteCount", 
+                                                     "commentCount"),
+                                         selected = "viewCount",
+                                         multiple = FALSE),
+                             sliderInput("slider",
+                                         "Intervalo:",
+                                         min = 0,
+                                         max = 500000,
+                                         value = c(80, 150),
+                                         step = 50)
+                         ),
+                         mainPanel(
+                             "Resultado",
+                             dataTableOutput("table1")
+                     ))
         )
     )
 ))

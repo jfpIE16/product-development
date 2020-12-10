@@ -1,0 +1,14 @@
+USE parcial1;
+
+CREATE TABLE videos_metadata (
+	id_video VARCHAR(30),
+	title VARCHAR(100),
+	description VARCHAR(500),
+	iframe VARCHAR(500),
+	url VARCHAR(100)
+);
+
+LOAD DATA INFILE '/var/lib/mysql-files/academatica_videos_metadata.csv'
+INTO TABLE videos_metadata
+FIELDS TERMINATED BY ','
+IGNORE 1 ROWS;

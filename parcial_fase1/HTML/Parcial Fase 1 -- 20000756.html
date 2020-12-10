@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:8787/p/3dcd8e83/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[3.5.1];shiny[1.5.0];selectize[0.11.2];ionrangeslider[2.1.6];strftime[0.9.2];htmlwidgets[1.5.2];datatables-css[0.0.0];datatables-binding[0.16];crosstalk[1.1.0.1];bootstrap[3.4.1]</script>
+<script src="./Parcial Fase 1 -- 20000756_files/json2-min.js"></script>
+<script src="./Parcial Fase 1 -- 20000756_files/jquery.min.js"></script>
+<link href="./Parcial Fase 1 -- 20000756_files/shiny.css" rel="stylesheet">
+<script src="./Parcial Fase 1 -- 20000756_files/shiny.min.js"></script>
+<link href="./Parcial Fase 1 -- 20000756_files/selectize.bootstrap3.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="shared/selectize/js/es5-shim.min.js"></script>
+<![endif]-->
+<script src="./Parcial Fase 1 -- 20000756_files/selectize.min.js"></script>
+<link href="./Parcial Fase 1 -- 20000756_files/ion.rangeSlider.css" rel="stylesheet">
+<link href="./Parcial Fase 1 -- 20000756_files/ion.rangeSlider.skinShiny.css" rel="stylesheet">
+<script src="./Parcial Fase 1 -- 20000756_files/ion.rangeSlider.min.js"></script>
+<script src="./Parcial Fase 1 -- 20000756_files/strftime-min.js"></script>
+<script src="./Parcial Fase 1 -- 20000756_files/htmlwidgets.js"></script>
+<link href="./Parcial Fase 1 -- 20000756_files/datatables-crosstalk.css" rel="stylesheet">
+<script src="./Parcial Fase 1 -- 20000756_files/datatables.js"></script>
+<link href="./Parcial Fase 1 -- 20000756_files/crosstalk.css" rel="stylesheet">
+<script src="./Parcial Fase 1 -- 20000756_files/crosstalk.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./Parcial Fase 1 -- 20000756_files/bootstrap.min.css" rel="stylesheet">
+<script src="./Parcial Fase 1 -- 20000756_files/bootstrap.min.js"></script>
+<script src="./Parcial Fase 1 -- 20000756_files/html5shiv.min.js"></script>
+<script src="./Parcial Fase 1 -- 20000756_files/respond.min.js"></script>  <title>Parcial Fase 1 -- 20000756</title>
+<link rel="stylesheet" type="text/css" href="./Parcial Fase 1 -- 20000756_files/jquery.dataTables.min.css"><link rel="stylesheet" type="text/css" href="./Parcial Fase 1 -- 20000756_files/jquery.dataTables.extra.css"><script src="./Parcial Fase 1 -- 20000756_files/jquery.dataTables.min.js"></script></head>
+<body>
+  <div class="container-fluid">
+    <h2>Parcial Fase 1 -- 20000756</h2>
+    <div class="tabbable">
+      <ul class="nav nav-tabs" data-tabsetid="9866">
+        <li class="">
+          <a href="http://127.0.0.1:8787/p/3dcd8e83/#tab-9866-1" data-toggle="tab" data-value="Raw Data" aria-expanded="false">Raw Data</a>
+        </li>
+        <li class="active">
+          <a href="http://127.0.0.1:8787/p/3dcd8e83/#tab-9866-2" data-toggle="tab" data-value="Manipulación de Datos" aria-expanded="true">Manipulación de Datos</a>
+        </li>
+      </ul>
+      <div class="tab-content" data-tabsetid="9866">
+        <div class="tab-pane" data-value="Raw Data" id="tab-9866-1">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="maxrows">Filas a mostrar</label>
+            <input id="maxrows" type="number" class="form-control shiny-bound-input" value="5">
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Descripción Videos</h2>
+              <pre id="rawtable1" class="shiny-text-output noplaceholder shiny-bound-output">                    kind                        etag                                          list_id    video_id       published_date
+857 youtube#playlistItem C4y5UievMjLCFY576ubNJMdKXRU VVUyRW5JX0kyX1NEcFRfV1lYRXNsVWl3LnBnWGtCZGNBUno0 pgXkBdcARz4 2007-03-25T23:52:27Z
+858 youtube#playlistItem TljiIglkzCz8pb_fF9BxxQnlsho VVUyRW5JX0kyX1NEcFRfV1lYRXNsVWl3LjRaN3VSaUFoY3NN 4Z7uRiAhcsM 2006-12-14T16:34:17Z
+859 youtube#playlistItem F7wM-qjB2ieRVD0_kYZPNS3hTf4 VVUyRW5JX0kyX1NEcFRfV1lYRXNsVWl3LlM4Q1BQZzcyTHFj S8CPPg72Lqc 2006-10-09T04:34:23Z
+860 youtube#playlistItem 4gIoGKoTobieiUIn7MRkeonsPSc VVUyRW5JX0kyX1NEcFRfV1lYRXNsVWl3Lll1bmk3Z05WZ2xN Yuni7gNVglM 2006-10-08T00:38:29Z
+861 youtube#playlistItem ZKU_FiPZdd-s74KrqJ9j44Lxb5M VVUyRW5JX0kyX1NEcFRfV1lYRXNsVWl3LmxWUnpMMTJwLVNB lVRzL12p-SA 2006-10-07T03:47:00Z</pre>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Estadísticas</h2>
+              <pre id="rawtable2" class="shiny-text-output noplaceholder shiny-bound-output">       id_video viewCount likeCount dislikeCount favoriteCount commentCount
+855 _lsEhHCYqnw    114644      1089           20             0           71
+856 _NznBOBEPeg      1383         6            0             0            0
+857 _pAnRc1vKqY     18468        84            6             0            7
+858 _YVyheaWL5k      5477        33            2             0            6
+859 _ZEuaGf0jpU     27005       102           10             0            4</pre>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane active" data-value="Manipulación de Datos" id="tab-9866-2">
+          <div class="row">
+            <div class="col-sm-4">
+              <form class="well">
+                <h3>Filtrado de datos</h3>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="select-selectized">Seleccione filtro a aplicar</label>
+                  <div>
+                    <select id="select" tabindex="-1" class="selectized shiny-bound-input" style="display: none;"><option value="viewCount" selected="selected">viewCount</option></select><div class="selectize-control single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="viewCount">viewCount</div><input type="text" autocomplete="off" tabindex="" id="select-selectized" style="width: 4px;"></div><div class="selectize-dropdown single" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+                    <script type="application/json" data-for="select" data-nonempty="">{}</script>
+                  </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="slider">Intervalo:</label>
+                  <span class="irs js-irs-0 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min" style="visibility: hidden;">0</span><span class="irs-max" style="visibility: hidden;">474,226</span><span class="irs-from" style="visibility: visible; left: 0.866252%;">0</span><span class="irs-to" style="visibility: visible; left: 94.0555%;">474,226</span><span class="irs-single" style="visibility: hidden; left: 45.4227%;">0 — 474,226</span></span><span class="irs-grid" style="width: 96.1402%; left: 1.82988%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -0.966308%;">0</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: visible; margin-left: -2.94142%;">47,423</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: visible; margin-left: -2.94142%;">94,845</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: visible; margin-left: -3.3814%;">142,268</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%; margin-left: -3.3814%;">189,690</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: visible; margin-left: -3.32246%;">237,113</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: visible; margin-left: -3.3814%;">284,536</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: visible; margin-left: -3.3814%;">331,958</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%; margin-left: -3.3814%;">379,381</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: visible; margin-left: -3.3814%;">426,803</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -3.3814%;">474,226</span></span><span class="irs-bar" style="cursor: ew-resize; left: 1.92988%; width: 96.1402%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-slider from" style="left: 0%;"></span><span class="irs-slider to" style="left: 96.1402%;"></span></span><input class="js-range-slider shiny-bound-input irs-hidden-input" id="slider" data-type="double" data-min="0" data-max="500000" data-from="80" data-to="150" data-step="50" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-drag-interval="true" data-data-type="number" tabindex="-1" readonly="">
+                </div>
+              </form>
+            </div>
+            <div class="col-sm-8">
+              Resultado
+              <div id="table1" style="width:100%; height:auto; " class="datatables html-widget html-widget-output shiny-bound-output"><div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="DataTables_Table_0"></label></div><div id="DataTables_Table_0_processing" class="dataTables_processing" style="display: none;">Processing...</div><table class="display dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+  <thead>
+    <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" aria-label=" "> </th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="id_video: activate to sort column ascending">id_video</th><th class="dt-right sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="viewCount: activate to sort column ascending">viewCount</th><th class="dt-right sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="likeCount: activate to sort column ascending">likeCount</th><th class="dt-right sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="dislikeCount: activate to sort column ascending">dislikeCount</th><th class="dt-right sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="favoriteCount: activate to sort column ascending">favoriteCount</th><th class="dt-right sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="commentCount: activate to sort column ascending">commentCount</th></tr>
+  </thead>
+<tbody><tr role="row" class="odd"><td>1</td><td>-1q-1RrZE00</td><td class=" dt-right">16606</td><td class=" dt-right">92</td><td class=" dt-right">53</td><td class=" dt-right">0</td><td class=" dt-right">12</td></tr><tr role="row" class="even"><td>2</td><td>-2WTs-eD6JE</td><td class=" dt-right">85798</td><td class=" dt-right">445</td><td class=" dt-right">106</td><td class=" dt-right">0</td><td class=" dt-right">75</td></tr><tr role="row" class="odd"><td>3</td><td>-Bn7thPEQc8</td><td class=" dt-right">74913</td><td class=" dt-right">645</td><td class=" dt-right">20</td><td class=" dt-right">0</td><td class=" dt-right">42</td></tr><tr role="row" class="even"><td>4</td><td>-D4vlF-QuBA</td><td class=" dt-right">37049</td><td class=" dt-right">141</td><td class=" dt-right">14</td><td class=" dt-right">0</td><td class=" dt-right">13</td></tr><tr role="row" class="odd"><td>5</td><td>-JF3nd7JGH4</td><td class=" dt-right">24743</td><td class=" dt-right">106</td><td class=" dt-right">4</td><td class=" dt-right">0</td><td class=" dt-right">3</td></tr><tr role="row" class="even"><td>6</td><td>-MhaFgJNLoU</td><td class=" dt-right">26433</td><td class=" dt-right">253</td><td class=" dt-right">17</td><td class=" dt-right">0</td><td class=" dt-right">20</td></tr><tr role="row" class="odd"><td>7</td><td>-MuMSIew1Oo</td><td class=" dt-right">77342</td><td class=" dt-right">415</td><td class=" dt-right">23</td><td class=" dt-right">0</td><td class=" dt-right">14</td></tr><tr role="row" class="even"><td>8</td><td>-Sug_-XSbeE</td><td class=" dt-right">54690</td><td class=" dt-right">219</td><td class=" dt-right">40</td><td class=" dt-right">0</td><td class=" dt-right">25</td></tr><tr role="row" class="odd"><td>9</td><td>-TkVVs2zlsY</td><td class=" dt-right">234</td><td class=" dt-right">13</td><td class=" dt-right">0</td><td class=" dt-right">0</td><td class=" dt-right">0</td></tr><tr role="row" class="even"><td>10</td><td>-tT9tFyFSKA</td><td class=" dt-right">15381</td><td class=" dt-right">85</td><td class=" dt-right">5</td><td class=" dt-right">0</td><td class=" dt-right">8</td></tr></tbody></table><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10 of 859 entries</div><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><a class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="-1" id="DataTables_Table_0_previous">Previous</a><span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0">5</a><span class="ellipsis">…</span><a class="paginate_button " aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0">86</a></span><a class="paginate_button next" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0" id="DataTables_Table_0_next">Next</a></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body></html>
