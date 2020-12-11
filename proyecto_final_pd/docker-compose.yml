@@ -1,0 +1,77 @@
+version: "3.8"
+services:
+        db:
+                image: mysql:5.7.17
+                ports:
+                        - 3306:3306
+                environment:
+                        - "MYSQL_ROOT_PASSWORD=root123"
+                        - "MYSQL_DATABASE=proyecto_pd"
+                        - "MYSQL_USER=test"
+                        - "MYSQL_PASSWORD=test123"
+                volumes:
+                        - "./data/db_schemas:/docker-entrypoint-initdb.d"
+                networks:
+                        proyecto_net:
+                                ipv4_address: 172.28.1.2
+        
+        postgres:
+                image: postgres:9.6
+                environment:
+                        - POSTGRES_USER=airflow
+                        - POSTGRES_PASSWORD=airflow
+                        - POSTGRES_DB=airflow
+                logging:
+                        options:
+                                max-size: 10m
+                                max-file: "3"
+                networks:
+                        proyecto_net:
+                                ipv4_address: 172.28.1.3
+
+        webserver:
+                build: ./docker_images/airflow
+                restart: always
+                depends_on:
+                        - postgres
+                environment:
+                        - LOAD_EX=n
+                        - EXECUTOR=Local
+                        - AIRFLOW__CORE__FERNET_KEY=IaQXHPzMpK8RrTPrUYotebjTru6mrG8uPFE-Wf7IUGw=
+                logging:
+                        options:
+                                max-size: 10m
+                                max-file: "3"
+                volumes:
+                        - ./dags:/usr/local/airflow/dags
+                        - ./data/raw_data:/home/airflow/data
+                ports:
+                        - "8080:8080"
+                command: webserver
+                healthcheck:
+                        test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
+                        interval: 30s
+                        timeout: 30s
+                        retries: 3
+                networks:
+                        proyecto_net:
+                                ipv4_address: 172.28.1.4
+
+        dashboard:
+                build: ./docker_images/streamlit
+                restart: always
+                depends_on:
+                        - webserver
+                volumes:
+                        - ./dashboard:/app
+                ports:
+                        - 8501:8501
+                networks:
+                        proyecto_net:
+                                ipv4_address: 172.28.1.5
+networks:
+        proyecto_net:
+                ipam:
+                        driver: default
+                        config:
+                                - subnet: 172.28.0.0/16

@@ -1,0 +1,7 @@
+streamlit
+pandas (>=0.24<1.0)
+plotly
+matplotlib
+seaborn
+sqlalchemy
+pymysql
