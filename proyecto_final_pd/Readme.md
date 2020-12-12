@@ -26,4 +26,4 @@ Para simular un ambiente más real se creo una red interna y se asigno una IP es
 * dashboard &#8594; 172.28.1.5/32 exponiendo el puerto 8501.
 
 A continuación se muestra un diagrama de árbol de la estructura de ficheros utilizada para el proyecto.
-![tree](/img/project_tree.png)
+![tree](/proyecto_pd/img/project_tree.png)
