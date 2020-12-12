@@ -107,6 +107,6 @@ file_sensor_task >> transform_process >> insert_process
 #### Creación de dashboard
 Una vez cargada la información en la base de datos se procedió a crear un dashboard interactivo utilizando la librearía de *streamlit* como base, *pandas* para procesamiento de datos y *plotly* para creación de gráficos.  
 Se definieron dos gráficos principales, el primero permite seleccionar el conjunto de datos a visualizar *deaths*, *confirmed* y *recovered*. Luego utilizando pandas se obtienen la fecha mínima y máxima del conjunto de datos seleccionados, a partir de esa información se genera un *slider* de fechas que al seleccionar una en específico se muestra un mapa del mundo utilizando una proyección naturan en el cual se observa la información en forma de burbuja con los datos acumulados a esa fecha. El resultado fue el siguiente:
-![img2](/proyecto_final_pd/img/confirmed_map_bubble.png)
+![img2](/proyecto_final_pd/img/confimed_map_bubble.png)
 El segundo es un gráfico consolidado por país, utilizando *pandas* se realiza una unión de la información de las distintas bases de datos y se genera un acumulado por cada país en una fecha específica utilizando las funciones *groupby* y *sum*. A partir de dicha información se genera un gráfico de líneas con cada uno de los contadores y se le agregan filtros para actualizar los ejes a un rango de fechas específico, por ejemplo, los últimos 6 o 4 meses. El resultado fue el siguiente:
-![img2](/proyecto_final_pd/img/line-chart.png)
+![img3](/proyecto_final_pd/img/line-chart.png)
